@@ -108,19 +108,6 @@ export const articleSlice = createSlice({
 	},
 	extraReducers: (builder) => {
 		builder
-			.addCase(getApiStats.pending, (state) => {
-				state.isLoading = true
-			})
-			.addCase(getApiStats.fulfilled, (state, action) => {
-				state.isLoading = false
-				state.isSuccess = true
-				state.apiStats = action.payload
-			})
-			.addCase(getApiStats.rejected, (state, action) => {
-				state.isLoading = false
-				state.isError = true
-				state.message = action.payload
-			})
 			.addCase(getAllArticles.pending, (state) => {
 				state.isLoading = true
 			})
