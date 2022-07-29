@@ -7,7 +7,9 @@ import {
 import Header from './components/Header'
 import Dashboard from './pages/Dashboard'
 import ArticleDetail from './pages/ArticleDetail'
-import ArticleForm from './pages/ArticleForm'
+import ArticleCreate from './pages/ArticleCreate'
+import ArticleUpdate from './pages/ArticleUpdate'
+import ArticleDelete from './pages/ArticleDelete'
 
 function App() {
 	return (
@@ -22,8 +24,16 @@ function App() {
 							element={<ArticleDetail />}
 						/>
 						<Route
-							path="/article/create/:articleId"
-							element={<ArticleForm />}
+							path="/article/create"
+							element={<ArticleCreate />}
+						/>
+						<Route
+							path="/article/update/:articleId"
+							element={<ArticleUpdate />}
+						/>
+						<Route
+							path="/article/delete/:articleId"
+							element={<ArticleDelete />}
 						/>
 					</Routes>
 				</div>

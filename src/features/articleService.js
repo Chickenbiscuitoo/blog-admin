@@ -17,14 +17,20 @@ const getArticle = async (articleId) => {
 
 // Create new article
 const createArticle = async (articleData) => {
-	const response = await axios.post(API_URL + 'article')
+	const response = await axios.post(
+		API_URL + 'article',
+		articleData
+	)
 
 	return response.data
 }
 
 // Update article
 const updateArticle = async (articleData, id) => {
-	const response = await axios.put(API_URL + 'article/' + id)
+	const response = await axios.put(
+		API_URL + 'article/' + id,
+		articleData
+	)
 
 	return response.data
 }

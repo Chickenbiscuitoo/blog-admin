@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import CommentItem from '../components/CommentItem'
 import Spinner from '../components/Spinner'
 import { getArticle, reset } from '../features/articleSlice'
+import { AiFillEdit, AiFillDelete } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 
 function ArticleDetail() {
 	let { articleId } = useParams()
@@ -41,7 +43,15 @@ function ArticleDetail() {
 
 	return (
 		<div className="article-page">
-			<h2>{selectedArticle.title}</h2>
+			<h2>
+				{selectedArticle.title}
+				<Link to={`/article/update/${articleId}`}>
+					<AiFillEdit />
+				</Link>
+				<Link to={`/article/delete/${articleId}`}>
+					<AiFillDelete />
+				</Link>
+			</h2>
 			{selectedArticle.author ? (
 				<h3>{selectedArticle.author.name}</h3>
 			) : (

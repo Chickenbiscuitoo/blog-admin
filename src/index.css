@@ -57,7 +57,6 @@ h5 {
 
 .header a:hover {
   color: #777;
-  margin-right: 5px;
 }
 
 .article-container {
@@ -107,6 +106,33 @@ h5 {
 .comment-container h6{
   font-size: 8px;
   font-weight: 400;
+}
+
+.form,
+.content {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: inherit;
+}
+
+.form-group label {
+  text-align: left;
+  display: block;
+  margin: 0 0 5px 3px;
 }
 
 .loadingSpinnerContainer {
@@ -172,4 +198,33 @@ h5 {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.danger-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.danger-container button {
+  margin-top: 30px;
+  padding: 10px 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: #ab1a1a;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  appearance: button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+}
+
+.danger-container button:hover {
+  transform: scale(0.98);
 }
